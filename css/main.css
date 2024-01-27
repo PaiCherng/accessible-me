@@ -1,17 +1,47 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: rgb(255, 245, 228);
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#skipnav{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#skipnav a{
+  background-color: orange;
+  color: #000;
+  font-weight: bold;
+  padding: 15px 5px;
+  position: absolute;
+  top: -50px;
+  text-decoration:none;
+}
+
+#skipnav a:focus{
+  outline: 5px solid #FFF;
+  top:0;
+}
+
+nav a:focus{
+  background-color: orange;
+  color: black;
+  font-weight:bold;
+  outline: 3px solid black;
+}
+
+h1,h2,h3,h4,h5,h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+}
+
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .container {
@@ -21,16 +51,30 @@ h6 {
 }
 
 img {
-  width: 100%;
+  /* width: 100%; */
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
   padding: 0;
+  font-weight: bold;
 }
+
+.main-nav ul li {
+  padding: 5px 5px 5px 5px;
+}
+
+.main-nav ul li:hover {
+  background-color: orange;
+}
+
 
 .main-nav ul li {
   flex: 1;
@@ -47,9 +91,16 @@ img {
 form input,
 form textarea {
   display: block;
-  width: 100%;
+  width: 98%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+}
+
+form input:focus {
+  /* background-color: orange; */
+  color: black;
+  font-weight:bold;
+  outline: 3px solid orange;
 }
 
 form textarea {
@@ -57,13 +108,29 @@ form textarea {
   max-height: 150px;
   height: 150px;
   resize: none;
+  margin-top: .5rem ;
+}
+
+form textarea:focus{
+  /* background-color: orange; */
+  color: black;
+  font-weight:bold;
+  outline: 3px solid orange;
 }
 
 form button {
-  background: none;
+  background: white;
+  font-weight: bold ;
   border: 2px solid black;
   padding: 1rem;
   text-transform: uppercase;
+}
+
+form button:focus{
+  background-color: orange;
+  color: black;
+  font-weight:bold;
+  outline: 3px solid black;
 }
 
 .site-footer {
